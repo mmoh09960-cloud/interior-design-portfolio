@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mariem Mohamed | Interior, Architectural & Furniture Designer</title>
+
+  <meta name="description" content="Portfolio of Mariem Mohamed, Interior, Architectural & Furniture Designer.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #f5f2ec;
+      --white: #ffffff;
+      --black: #171717;
+      --gray: #6f6b64;
+      --line: #ddd8cf;
+      --accent: #b8aa96;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(245, 242, 236, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      padding: 160px 8% 100px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 1100px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 10vw, 125px);
+      line-height: 0.9;
+      font-weight: 600;
+      letter-spacing: -5px;
+      margin-bottom: 35px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #8e8579;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      font-size: 19px;
+      color: var(--gray);
+      margin-bottom: 40px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      background: var(--black);
+      color: white;
+      border-radius: 50px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 110px 8%;
+    }
+
+    .section-label {
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: clamp(38px, 6vw, 70px);
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 55px;
+      letter-spacing: -2px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 21px;
+      color: #55514b;
+      max-width: 800px;
+    }
+
+    .education {
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+      margin-top: 30px;
+    }
+
+    .education-title {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+
+    .education p {
+      font-size: 17px;
+    }
+
+    /* PROJECTS */
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .project {
+      min-height: 360px;
+      background: #ded8ce;
+      padding: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+      transition: 0.4s;
+    }
+
+    .project::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,255,255,0.35),
+          rgba(0,0,0,0.05)
+        );
+    }
+
+    .project-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .project:hover {
+      transform: translateY(-7px);
+    }
+
+    .project:nth-child(2) {
+      background: #cfc8bc;
+    }
+
+    .project:nth-child(3) {
+      background: #e5e0d8;
+    }
+
+    .project:nth-child(4) {
+      background: #bdb4a7;
+    }
+
+    .project:nth-child(5) {
+      background: #d8d1c5;
+    }
+
+    .project:nth-child(6) {
+      background: #c8c0b4;
+    }
+
+    .project-number {
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      color: #5f5a53;
+    }
+
+    .project h3 {
+      font-size: 31px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .project p {
+      color: #5d5952;
+      font-size: 15px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .service {
+      padding: 35px 25px 35px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .service h3 {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    /* SOFTWARE */
+
+    .software {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .software span {
+      padding: 13px 22px;
+      border: 1px solid #bcb5aa;
+      border-radius: 50px;
+      font-size: 14px;
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--black);
+      color: white;
+    }
+
+    .contact .section-label {
+      color: #aaa;
+    }
+
+    .contact-title {
+      font-size: clamp(45px, 8vw, 100px);
+      line-height: 0.95;
+      font-weight: 500;
+      letter-spacing: -3px;
+      margin-bottom: 60px;
+    }
+
+    .contact-links {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      border-top: 1px solid #444;
+      padding-top: 18px;
+      color: #ddd;
+      transition: 0.3s;
+    }
+
+    .contact-card:hover {
+      color: white;
+      border-color: white;
+    }
+
+    .contact-card small {
+      display: block;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+      margin-bottom: 8px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--black);
+      color: #777;
+      padding: 30px 8%;
+      border-top: 1px solid #333;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 18px 5%;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 140px 7% 80px;
+      }
+
+      .hero h1 {
+        letter-spacing: -3px;
+      }
+
+      section {
+        padding: 80px 7%;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        min-height: 300px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-links {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="logo">MM.</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Interior · Architectural · Furniture Design
+      </div>
+
+      <h1>
+        Mariem
+        <span>Mohamed</span>
+      </h1>
+
+      <p class="hero-description">
+        Interior, Architectural & Furniture Designer focused on
+        creating functional, aesthetic and thoughtfully detailed spaces.
+      </p>
+
+      <a href="#projects" class="button">
+        Explore My Work
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="section-label">01 — About</div>
+
+    <div class="about-grid">
+
+      <h2 class="section-title">
+        Design with<br>purpose.
+      </h2>
+
+      <div>
+
+        <p class="about-text">
+          I am an Interior, Architectural & Furniture Designer with a
+          passion for creating functional, aesthetic, and thoughtfully
+          detailed spaces. My work combines creativity, spatial planning,
+          material selection, 3D visualization, and technical development
+          to transform ideas into complete design solutions.
+        </p>
+
+        <p class="about-text" style="margin-top:25px;">
+          I enjoy exploring different design styles and working on a wide
+          range of residential, commercial, and specialized spaces, always
+          aiming to create designs that balance functionality, identity,
+          and visual character.
+        </p>
+
+        <div class="education">
+
+          <div class="education-title">
+            Education
+          </div>
+
+          <p>
+            Faculty of Applied Arts — Interior Design & Architecture Department
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <div class="section-label">02 — Selected Work</div>
+
+    <h2 class="section-title">
+      Projects
+    </h2>
+
+    <div class="projects">
+
+      <div class="project">
+        <div class="project-content">
+          <div class="project-number">01</div>
+          <h3>Residential Interiors</h3>
+          <p>Complete home interior design and spatial solutions.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-content">
+          <div class="project-number">02</div>
+          <h3>Kitchens & Bathrooms</h3>
+          <p>Functional layouts, materials and detailed interior concepts.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-content">
+          <div class="project-number">03</div>
+          <h3>Living Spaces</h3>
+          <p>Living rooms, dressing rooms and personalized residential spaces.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-content">
+          <div class="project-number">04</div>
+          <h3>Commercial Design</h3>
+          <p>Retail shops, companies and commercial interior environments.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-content">
+          <div class="project-number">05</div>
+          <h3>Furniture Design</h3>
+          <p>Creative furniture concepts developed from form and function.</p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-content">
+          <div class="project-number">06</div>
+          <h3>3D Visualization</h3>
+          <p>Modeling, materials, lighting and architectural visualization.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section>
+
+    <div class="section-label">03 — Expertise</div>
+
+    <h2 class="section-title">
+      What I Do
+    </h2>
+
+    <div class="services">
+
+      <div class="service">
+        <h3>Interior Design</h3>
+        <p>
+          Space planning, concepts, materials, furniture and complete
+          interior solutions.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Architectural Design</h3>
+        <p>
+          Architectural development, plans, elevations and spatial studies.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Furniture Design</h3>
+        <p>
+          Furniture concepts combining functionality, identity and form.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>3D Visualization</h3>
+        <p>
+          Detailed 3D modeling, realistic materials, lighting and rendering.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Technical Drawings</h3>
+        <p>
+          Plans, elevations, sections and execution details.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>AI Design</h3>
+        <p>
+          Using AI design tools to explore concepts, references and
+          visualization possibilities.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOFTWARE -->
+
+  <section id="skills">
+
+    <div class="section-label">04 — Tools</div>
+
+    <h2 class="section-title">
+      Software & Skills
+    </h2>
+
+    <div class="software">
+
+      <span>AutoCAD</span>
+      <span>3ds Max</span>
+      <span>Revit</span>
+      <span>Photoshop</span>
+      <span>Lumion</span>
+      <span>AI Design Tools</span>
+      <span>Interior Design</span>
+      <span>Architectural Design</span>
+      <span>Furniture Design</span>
+      <span>3D Visualization</span>
+      <span>Technical Drawing</span>
+      <span>Rendering</span>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact">
+
+    <div class="section-label">05 — Contact</div>
+
+    <h2 class="contact-title">
+      Let's create<br>something great.
+    </h2>
+
+    <div class="contact-links">
+
+      <a class="contact-card"
+         href="mailto:mmoh09960@gmail.com">
+
+        <small>Email</small>
+        mmoh09960@gmail.com
+
+      </a>
+
+
+      <a class="contact-card"
+         href="https://www.linkedin.com/in/mariem-mohamed-36ba35416/"
+         target="_blank">
+
+        <small>LinkedIn</small>
+        Mariem Mohamed
+
+      </a>
+
+
+      <a class="contact-card"
+         href="https://wa.me/201556673923"
+         target="_blank">
+
+        <small>WhatsApp</small>
+        +20 155 667 3923
+
+      </a>
+
+
+      <a class="contact-card"
+         href="https://github.com/mmoh09960-cloud"
+         target="_blank">
+
+        <small>GitHub</small>
+        mmoh09960-cloud
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 Mariem Mohamed —
+    Interior, Architectural & Furniture Designer.
+
+  </footer>
+
+</body>
+</html>
